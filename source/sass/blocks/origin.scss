@@ -1,0 +1,87 @@
+.origin {
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.origin__list {
+  margin-bottom: 41px;
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+}
+
+.origin__item {
+  padding-left: 8px;
+  margin-bottom: 15px;
+}
+
+.origin__mark {
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  border-radius: 20px;
+  position: relative;
+  top: 6px;
+  left: -6px;
+  background: $grey;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.origin__mark:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: $white;
+  border-radius: 50%;
+  transition: .15s;
+}
+
+.origin__input:checked+.origin__mark {
+  background: $primary;
+}
+
+.origin__input:checked+.origin__mark:before {
+  transform: translateX(18px);
+}
+
+/* Hover & Focus */
+.origin__input:not(:disabled):hover+.origin__mark,
+.origin__input:not(:disabled):focus-visible+.origin__mark {
+  box-shadow: 0 0 0 2px $primary-lighter inset;
+  background-color: $primary-opacity;
+}
+
+/* Disabled unchecked */
+.origin__input:disabled:not(:checked)+.origin__mark {
+  background: $light-grey;
+}
+
+.origin__input:disabled:not(:checked)+.origin__mark:before {
+  background: $white;
+}
+
+/* Disabled checked */
+.origin__input:disabled:checked+.origin__mark {
+  background: $light-grey;
+}
+
+.origin__input:disabled:checked+.origin__mark:before {
+  background: $grey;
+}

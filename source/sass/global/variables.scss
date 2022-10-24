@@ -1,0 +1,32 @@
+//base colors
+
+$primary: #7859cf;
+$secondary: #f0ebff;
+$black: #333333;
+$white: #ffffff;
+$grey: #bdbdbd;
+
+//alt colors
+
+$primary-lighter: #9070ec;
+$primary-darker: #593cac;
+$primary-opacity: fade-out($primary, 0.75);
+$light-grey: #e2e2e2;
+
+//bg colors
+
+$lightest-grey: #f8f8f8;
+$flat-white: #f3ebe1;
+$lavender-latte: #eae6fc;
+$espresso: #e5e6e8;
+
+//screen sizes
+
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width-only: 767px;
+
+//paddings
+
+$padding-small: 0 20px;
+$padding-large: 0 40px;

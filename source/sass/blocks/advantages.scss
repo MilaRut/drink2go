@@ -1,0 +1,150 @@
+.advantages {
+  @media (max-width: $mobile-width-only) {
+    padding: $padding-small;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: $padding-small;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: $padding-large;
+    padding-top: 100px;
+    padding-bottom: 83px;
+  }
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.advantages__subtitle {
+  margin: 0;
+  margin-bottom: 101px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 156px;
+  }
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+    padding: 0 14px 49px 82px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+    padding: 0;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 98px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 262px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    min-width: 318px;
+  }
+
+  &::before {
+    position: absolute;
+
+    @media (max-width: $mobile-width-only) {
+      top: -66px;
+      left: 117px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: 1px;
+      left: -70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -77px;
+      left: 137px;
+    }
+  }
+
+  &--speed::before {
+    content: url("../img/icon-speed.svg");
+  }
+
+  &--fit::before {
+    content: url("../img/icon-fit.svg");
+  }
+
+  &--energy::before {
+    content: url("../img/icon-energy.svg");
+  }
+
+  &--eco::before {
+    content: url("../img/icon-eco.svg");
+  }
+}
+
+.advantages__item:last-child {
+  margin: 0;
+}
+
+.advantages__item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.78;
+  color: $black;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.advantages__item-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}

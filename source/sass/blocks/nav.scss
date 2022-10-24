@@ -1,0 +1,110 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav__toggle {
+  position: relative;
+  display: block;
+  padding: 30px;
+  width: 16px;
+  height: 16px;
+  background-color: $white;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  &:active {
+    background-color: $secondary;
+  }
+}
+
+.nav--hidden .nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  width: 16px;
+  height: 2px;
+  background-color: $black;
+  box-shadow: 0 5px 0 0 $black, 0 10px 0 0 $black;
+}
+
+.nav--visible .nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: 22px;
+    width: 16px;
+    height: 2px;
+    background-color: $black
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+// For enabled JS ==>
+
+.nav--hidden .site-list {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.nav--visible .site-list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+  }
+}
+
+// For disabled JS ==>
+
+.nav--nojs {
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+    margin-bottom: 229px;
+  }
+}
+
+.nav--nojs .site-list {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    display: block;
+    order: 1;
+  }
+}
+
+.nav--nojs .user-list {
+  margin-right: 60px;
+}
+
+.nav--nojs .nav__toggle {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}

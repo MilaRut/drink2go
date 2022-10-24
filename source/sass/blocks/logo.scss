@@ -1,0 +1,30 @@
+.logo {
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 12px 0 0 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 0 0 20px;
+    margin-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 22px 0 0 40px;
+    margin-right: 20px;
+  }
+}
+
+.logo__image {
+  object-fit: fill;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}

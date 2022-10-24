@@ -1,0 +1,29 @@
+.map {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-image: url("../img/bg-map-mob.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/bg-map-tab.jpg");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/bg-map-desk.jpg");
+  }
+}
+
+.map__canvas {
+  @media (max-width: $mobile-width-only) {
+    height: 420px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}

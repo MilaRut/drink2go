@@ -1,0 +1,132 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 59px;
+  }
+}
+
+.cards__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+
+  @media (max-width: $mobile-width-only) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+.cards__item {
+  max-width: 280px;
+  min-height: 380px;
+  border-radius: 4px;
+  padding: 40px 20px 0;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    max-width: 349px;
+    min-height: 390px;
+    padding: 50px 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+    min-height: 410px;
+  }
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.cards__image {
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.cards__link-subtitle {
+  text-decoration: none;
+}
+
+.cards__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.78;
+  color: $black;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 9px;
+  }
+}
+
+.cards__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: $black;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.cards__price-cart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.6;
+  color: $black;
+}
+
+.cards__to-cart {
+  width: 141px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 17px;
+}
+
+.cards__icon {
+  fill: $white;
+  padding-top: 7px;
+}

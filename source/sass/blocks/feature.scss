@@ -1,0 +1,63 @@
+.feature {
+  @media (min-width: $tablet-width) {
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.feature__item {
+  padding-left: 34px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.feature__mark {
+  position: absolute;
+  top: -3px;
+  left: -34px;
+  background-color: transparent;
+  border: 2px solid $grey;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  .feature__input:not(:disabled):hover+&,
+  .feature__input:not(:disabled):focus-visible+& {
+    background-color: $primary-opacity;
+    border-color: $primary-lighter;
+    box-shadow: 0 0 0 2px $white inset;
+    outline: none;
+  }
+
+  .feature__input:not(:disabled):active+& {
+    background-color: $primary;
+    box-shadow: 0 0 0 2px $white inset;
+  }
+}
+
+.feature__input:checked+.feature__mark {
+  background-color: $primary;
+  box-shadow: 0 0 0 2px $white inset;
+  border-color: $primary;
+}
+
+.feature__input:disabled {
+  border-color: $light-grey;
+}
+
+.feature__input:disabled:checked+.feature__mark {
+  background-color: $light-grey;
+  box-shadow: 0 0 0 2px $white inset;
+  border-color: $light-grey;
+}
